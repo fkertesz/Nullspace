@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .navItem {
+        @apply px-4 py-2 rounded-md underline-offset-2 hover:ring-2 ring-black hover:font-bold transition-all ease-in-out
+    }
+
+    .action-button {
+        @apply bg-[#752936] font-bold transition-all hover:scale-105 text-white
+    }
+}
