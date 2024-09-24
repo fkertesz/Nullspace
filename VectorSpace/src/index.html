@@ -7,12 +7,30 @@
     <title>VectorSpace</title>
   </head>
   <body class="">
-    <nav class="mx-auto max-w-7xl w-auto mt-5">
+    <div class="sticky top-0 left-0 font-bold text-2xl">
+      <h1 class="hidden 2xl:block">2xl</h1>
+      <h1 class="hidden xl:block 2xl:hidden">xl</h1>
+      <h1 class="hidden lg:block xl:hidden">lg</h1>
+      <h1 class="hidden md:block lg:hidden">md</h1>
+      <h1 class="hidden sm:block md:hidden">sm</h1>
+    </div>
+
+    <nav class="responsive-margins w-auto mt-5 px-5">
       <ul class="flex justify-between items-center">
         <li class="text-2xl font-extralight justify-center items-center">
-          <a href="index.html">Team NullSpace</a>
+          <a
+            href="index.html"
+            class="flex justify-center items-center text-[#752936] font-mono"
+          >
+            <img
+              src="./icons/nullspace_thick-removebg.png"
+              alt=""
+              class="w-8 mx-"
+            />
+            <label for="logo" class="ml-2">NULLSPACE</label>
+          </a>
         </li>
-        <ol class="flex space-x-4 justify-center items-center">
+        <ol class="flex space-x-2 lg:space-x-4 justify-center items-center">
           <li class="navItem">
             <a href="product.html">Our Product</a>
           </li>
@@ -39,7 +57,7 @@
     </nav>
 
     <section
-      class="mx-auto max-w-7xl mt-16 flex content-center text-center justify-center items-center"
+      class="responsive-margins mt-16 flex content-center text-center justify-center items-center"
     >
       <div
         class="mx-auto max-w-xl flex-col space-y-10 content-center text-center"
@@ -68,7 +86,7 @@
     </section>
 
     <section
-      class="mx-auto max-w-7xl mt-16 px-3 flex text-left justify-center items-center py-20"
+      class="responsive-margins mt-16 px-3 flex text-left justify-center items-center py-20"
     >
       <div class="flex-col space-y-4 px-8">
         <img src="icons/task-list 1.png" alt="features_checkboxes" />
@@ -99,7 +117,7 @@
     </section>
 
     <section class="w-full bg-[#F4F7FA]">
-      <div class="mx-auto py-20 max-w-7xl px-10 flex-col space-y-10">
+      <div class="responsive-margins py-20 px-10 flex-col space-y-10">
         <h1 class="text-4xl font-bold text-black">
           Basic Features to Better Your Team
         </h1>
@@ -114,18 +132,17 @@
       </div>
     </section>
 
-
     <!--  Pricing Section -->
 
     <section class="w-full bg-[#40434E] content-center text-center">
-      <div class="mx-auto py-20 max-w-7xl px-10 flex-col space-y-10">
+      <div class="responsive-margins py-20 px-10 flex flex-col space-y-10">
         <h1 class="text-4xl font-bold text-white">Pricing & Plans</h1>
         <p class="text-lg text-gray-200">
           From basic features to tailored toolsets, we have plans to fit your
           needs.
         </p>
 
-        <div class="flex space-x-4 flex-1">
+        <div class="flex flex-col lg:flex-row gap-4 flex-1">
           <div
             class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center flex-1"
           >
@@ -173,7 +190,7 @@
             </div>
             <p class="text-lg text-gray-500">
               Unlock additional features to enhance your team’s collaboration,
-            offering more flexibility.
+              offering more flexibility.
             </p>
             <button class="px-4 py-2 rounded-md action-button">
               <a href="product.html">More Info</a>
@@ -199,7 +216,8 @@
               </h6>
             </div>
             <p class="text-lg text-gray-500">
-              Access extensive and advanced features tailored for businesses, ensuring seamless collaboration and maximum efficiency.
+              Access extensive and advanced features tailored for businesses,
+              ensuring seamless collaboration and maximum efficiency.
             </p>
             <button class="px-4 py-2 rounded-md action-button">
               <a href="contact.html">Contact Us</a>
@@ -209,37 +227,74 @@
       </div>
     </section>
 
-
     <!--  Team Section -->
 
     <section class="w-full bg-[#F4F7FA] content-center text-center">
-      <div class="mx-auto py-20 max-w-7xl px-10 flex-col space-y-10">
+      <div class="responsive-margins py-20 px-10 flex-col space-y-10">
         <h1 class="text-4xl font-bold text-black">Meet Team NullSpace</h1>
 
-        <div class="flex space-x-4">
-          <div
-            class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center"
-          >
-            
+        <div
+          class="bg-white rounded-md py-8 px-10 flex flex-col lg:flex-row justify-center items-center lg:justify-between flex-1 gap-10"
+        >
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front overflow-clip">
+                <img
+                  src="./images/team/zac.webp"
+                  alt="Zac Headshot"
+                  class="w-full h-full 2xl:h-auto object-cover lg:object-cover"
+                />
+              </div>
+              <div
+                class="flip-card-back py-8 flex flex-col justify-between px-2"
+              >
+                <h1 class="font-bold text-3xl">Zac Cowan</h1>
+                <p>Major: Computer Engineering and Mathematics</p>
+                <p>Graduation: 2025/2026</p>
+                <p>Hometown: Richmond, Kentucky</p>
+                <p>Passions: Problem Solving and Community</p>
+              </div>
+            </div>
           </div>
 
-          <div class="flex space-x-4">
-            <div
-              class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center"
-            >
-              
-            </div>
-
-            <div class="flex space-x-4">
-              <div
-                class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center"
-              >
-
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front overflow-clip">
+                <img
+                  src="./images/team/fanni.png"
+                  alt="Fanni Headshot"
+                  class="w-full h-full 2xl:h-auto object-cover"
+                />
               </div>
+              <div class="flip-card-back py-8 flex flex-col justify-between">
+                <h1 class="font-bold text-3xl">Fanni Kertesz</h1>
+                <p>Major: Mathematics</p>
+                <p>Minor: Computer Science</p>
+                <p>Graduation: 2025</p>
+                <p>Hometown: Gyor, Hungary</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front overflow-clip">
+                <img
+                  src="./images/team/nicholas.jpg"
+                  alt="Nicholas Headshot"
+                  class="w-full h-full 2xl:h-auto object-cover"
+                />
+              </div>
+              <div class="flip-card-back py-8 flex flex-col justify-between">
+                <h1 class="font-bold text-3xl">Nicholas Newsom</h1>
+                <p>Major: Computer Science</p>
+                <p>Graduation: 2025</p>
+                <p>Hometown: Louisville, Kentucky</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    
   </body>
 </html>
