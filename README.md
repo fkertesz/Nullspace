@@ -26,3 +26,7 @@ Feature Sets include:
 
 ## Product Vision Statement: 
 VectorSpace empowers teams to work better together by offering a streamlined, customizable platform for scheduling, communication, and task management. Our vision is to be the go-to tool for any group looking to stay organized and connected, with features that adapt to meet the unique needs of each and every team. We believe in the power of effortless collaboration and communication, where each member is empowered to contribute, connect, and succeed. We are committed to making teamwork more efficient, focused, and productive, no matter the setting.
+
+
+## [Click to view Landing Page without cloning repository!](https://htmlpreview.github.io/?https://github.com/fkertesz/Nullspace/blob/main/VectorSpace/src/index.html)
+
