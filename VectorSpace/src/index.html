@@ -7,17 +7,23 @@
     <title>VectorSpace</title>
   </head>
   <body class="">
-    <div class="sticky top-0 left-0 font-bold text-2xl">
-      <h1 class="hidden 2xl:block">2xl</h1>
-      <h1 class="hidden xl:block 2xl:hidden">xl</h1>
-      <h1 class="hidden lg:block xl:hidden">lg</h1>
-      <h1 class="hidden md:block lg:hidden">md</h1>
-      <h1 class="hidden sm:block md:hidden">sm</h1>
-    </div>
+    <!--
+        <div class="sticky top-0 left-0 font-bold text-2xl">
+          <h1 class="hidden 2xl:block">2xl</h1>
+          <h1 class="hidden xl:block 2xl:hidden">xl</h1>
+          <h1 class="hidden lg:block xl:hidden">lg</h1>
+          <h1 class="hidden md:block lg:hidden">md</h1>
+          <h1 class="hidden sm:block md:hidden">sm</h1>
+        </div>
+    -->
 
-    <nav class="responsive-margins w-auto mt-5 px-5">
+    <nav
+      class="sticky top-5 responsive-margins w-auto mt-5 px-5 bg-[#F4F7FA]/70 border-2 hover:backdrop-blur-sm py-5 rounded-xl z-50"
+    >
       <ul class="flex justify-between items-center">
-        <li class="text-2xl font-extralight justify-center items-center">
+        <li
+          class="text-2xl font-extralight justify-center items-center cursor-pointer"
+        >
           <a
             href="index.html"
             class="flex justify-center items-center text-[#752936] font-mono"
@@ -27,20 +33,26 @@
               alt=""
               class="w-8 mx-"
             />
-            <label for="logo" class="ml-2">NULLSPACE</label>
+            <label
+              for="logo"
+              class="ml-2 font-sans uppercase font-bold cursor-pointer"
+              >nullspace</label
+            >
           </a>
         </li>
-        <ol class="flex space-x-2 lg:space-x-4 justify-center items-center">
+        <ol
+          class="hidden lg:flex space-x-2 lg:space-x-4 justify-center items-center"
+        >
           <li class="navItem">
-            <a href="product.html">Our Product</a>
+            <a href="#product">Our Product</a>
           </li>
 
           <li class="navItem">
-            <a href="vision.html">Our Vision</a>
+            <a href="#vision">Our Vision</a>
           </li>
 
           <li class="navItem">
-            <a href="about.html">Our Team</a>
+            <a href="#about">Our Team</a>
           </li>
 
           <li class="navItem">
@@ -57,6 +69,7 @@
     </nav>
 
     <section
+      id="product"
       class="responsive-margins mt-16 flex content-center text-center justify-center items-center"
     >
       <div
@@ -116,19 +129,103 @@
       </div>
     </section>
 
-    <section class="w-full bg-[#F4F7FA]">
-      <div class="responsive-margins py-20 px-10 flex-col space-y-10">
-        <h1 class="text-4xl font-bold text-black">
-          Basic Features to Better Your Team
-        </h1>
-        <p class="text-lg text-gray-500">
+    <section id="vision" class="w-full bg-[#F4F7FA]">
+      <div
+        class="responsive-margins py-20 px-10 flex flex-col lg:flex-row justify-center items-center gap-5"
+      >
+        <div
+          class="space-y-10 flex-col flex px-20 justify-center items-center text-center"
+        >
+          <h1 class="text-4xl font-bold text-black">
+            Basic Features to Better Your Team
+          </h1>
+          <p class="text-lg text-gray-500">
+            With lots of essential features, our platform improves focus,
+            productivity, and connection. Scroll on and enjoy exploring our
+            features hightlights.
+          </p>
+          <button class="px-4 py-2 rounded-md action-button">
+            <a href="product.html">Get Started for Free</a>
+          </button>
+        </div>
+
+        <div class="flex-1 lg:flex-auto lg:w-[70%] lg:mr-24">
+          <img src="./images/snippets/team.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full">
+      <div
+        class="space-y-10 flex-col flex pt-20 px-10 justify-center items-center text-center"
+      >
+        <h1 class="text-4xl font-bold text-black">Collaboration</h1>
+        <p class="text-lg text-gray-500 max-w-xl">
           With lots of essential features, our platform improves focus,
           productivity, and connection. Scroll on and enjoy exploring our
           features hightlights.
         </p>
-        <button class="px-4 py-2 rounded-md action-button">
-          <a href="product.html">Get Started for Free</a>
-        </button>
+      </div>
+
+      <div
+        class="responsive-margins py-20 px-10 flex flex-col lg:flex-row justify-center items-center gap-5"
+      >
+        <div class="flex-1 lg:flex-auto lg:mr-10 items-center justify-center">
+          <img src="./images/snippets/colab.png" alt="" />
+        </div>
+
+        <div
+          class="space-y-10 flex-col flex max-w-xl lg:w-auto px-10 justify-start items-center text-center"
+        >
+          <div class="flex gap-3 justify-center items-baseline">
+            <label
+              for="step one"
+              class="bg-[#752936]/20 text-[#752936] uppercase font-semibold rounded-full px-4 py-2"
+              >1</label
+            >
+            <div class="text-left space-y-4">
+              <h3 class="text-[#752936] font-semibold">Create a team.</h3>
+              <p class="text-md text-gray-500">
+                With different team options, you can customize the basic
+                features.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-3 justify-center items-baseline">
+            <label
+              for="step two"
+              class="bg-[#752936]/20 text-[#752936] uppercase font-semibold rounded-full px-4 py-2"
+              >2</label
+            >
+            <div class="text-left space-y-4">
+              <h3 class="text-[#752936] font-semibold">Assign team members</h3>
+              <p class="text-md text-gray-500">
+                Different members can have different roles and feature access
+                within the team.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-3 justify-center items-baseline">
+            <label
+              for="step three"
+              class="bg-[#752936]/20 text-[#752936] uppercase font-semibold rounded-full px-4 py-2"
+              >3</label
+            >
+            <div class="text-left space-y-4">
+              <h3 class="text-[#752936] font-semibold">Get Work Done!</h3>
+              <p class="text-md text-gray-500">
+                Use tools and dashes in your team to increase collaboration and
+                become more effective.
+              </p>
+            </div>
+          </div>
+
+          <button class="px-4 py-2 rounded-md action-button">
+            <a href="product.html">Get Started for Free</a>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -144,7 +241,7 @@
 
         <div class="flex flex-col lg:flex-row gap-4 flex-1">
           <div
-            class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center flex-1"
+            class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center flex-1 lg:h-[30rem] lg:relative"
           >
             <h5
               class="bg-[#752936]/20 text-[#752936] uppercase font-bold rounded-full px-4 py-2 w-28"
@@ -165,13 +262,15 @@
               Our basic features provide a modern dashboard with tools for
               better collaboration, planning, inspiration, and more.
             </p>
-            <button class="px-4 py-2 rounded-md action-button">
+            <button
+              class="px-4 py-2 rounded-md action-button lg:absolute bottom-14"
+            >
               <a href="product.html">Download Now</a>
             </button>
           </div>
 
           <div
-            class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center flex-1"
+            class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center flex-1 h-[30rem] relative"
           >
             <h5
               class="bg-[#752936]/20 text-[#752936] uppercase font-bold rounded-full px-4 py-2 w-28"
@@ -192,20 +291,22 @@
               Unlock additional features to enhance your team’s collaboration,
               offering more flexibility.
             </p>
-            <button class="px-4 py-2 rounded-md action-button">
+            <button
+              class="px-4 py-2 rounded-md action-button lg:absolute bottom-14"
+            >
               <a href="product.html">More Info</a>
             </button>
           </div>
 
           <div
-            class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center flex-1"
+            class="bg-white rounded-md py-8 px-10 flex-col flex space-y-10 items-center flex-1 h-[30rem] relative"
           >
             <h5
               class="bg-[#752936]/20 text-[#752936] uppercase font-bold rounded-full px-4 py-2 w-28"
             >
               Buisness
             </h5>
-            <div>
+            <div class="">
               <h2
                 class="uppercase font-extrabold font-mono text-3xl text-[#40434E]"
               >
@@ -219,7 +320,9 @@
               Access extensive and advanced features tailored for businesses,
               ensuring seamless collaboration and maximum efficiency.
             </p>
-            <button class="px-4 py-2 rounded-md action-button">
+            <button
+              class="px-4 py-2 rounded-md action-button lg:absolute bottom-14"
+            >
               <a href="contact.html">Contact Us</a>
             </button>
           </div>
@@ -229,7 +332,7 @@
 
     <!--  Team Section -->
 
-    <section class="w-full bg-[#F4F7FA] content-center text-center">
+    <section id="about" class="w-full bg-[#F4F7FA] content-center text-center">
       <div class="responsive-margins py-20 px-10 flex-col space-y-10">
         <h1 class="text-4xl font-bold text-black">Meet Team NullSpace</h1>
 
@@ -242,7 +345,7 @@
                 <img
                   src="./images/team/zac.webp"
                   alt="Zac Headshot"
-                  class="w-full h-full 2xl:h-auto object-cover lg:object-cover"
+                  class="w-full h-full 2xl:h-full object-cover lg:object-cover"
                 />
               </div>
               <div
@@ -263,7 +366,7 @@
                 <img
                   src="./images/team/fanni.png"
                   alt="Fanni Headshot"
-                  class="w-full h-full 2xl:h-auto object-cover"
+                  class="w-full h-full 2xl:h-full object-cover"
                 />
               </div>
               <div class="flip-card-back py-8 flex flex-col justify-between">
@@ -282,7 +385,7 @@
                 <img
                   src="./images/team/nicholas.jpg"
                   alt="Nicholas Headshot"
-                  class="w-full h-full 2xl:h-auto object-cover"
+                  class="w-full h-full 2xl:h-full object-cover"
                 />
               </div>
               <div class="flip-card-back py-8 flex flex-col justify-between">

@@ -12,7 +12,7 @@
     }
     
     .responsive-margins {
-      @apply mx-auto lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[100rem]
+      @apply mx-auto lg:max-w-6xl xl:max-w-7xl
     }
     .flip-card {
       @apply bg-transparent w-[70%] lg:w-[33%] h-[600px] lg:h-[300px] xl:h-[400px] 2xl:h-[500px]
