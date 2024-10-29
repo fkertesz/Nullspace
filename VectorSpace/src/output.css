@@ -740,22 +740,6 @@ video {
   flex: 1 1 0%;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.animate-bounce {
-  animation: bounce 1s infinite;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -889,10 +873,6 @@ video {
 
 .bg-\[\#F4F7FA\]\/70 {
   background-color: rgb(244 247 250 / 0.7);
-}
-
-.bg-blue-400\/70 {
-  background-color: rgb(96 165 250 / 0.7);
 }
 
 .bg-white {
@@ -1162,11 +1142,6 @@ video {
   background-color: #752936;
   color: white;
   transform: rotateY(180deg);
-}
-
-.hover\:bg-blue-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
 }
 
 .hover\:font-bold:hover {
