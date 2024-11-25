@@ -15,6 +15,8 @@ function App() {
     announcements: false,
   });
 
+  // Module mapping maps an element of activeModules to a React component.
+  // Order dictates the order components are rendered.
   const moduleMapping = {
     calendar: <Calendar />,
     tasks: <Tasks />,
@@ -32,8 +34,11 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="absolute top-5 left-5 font-bold text-3xl text-white">
+        VectorSpace
+      </h1>
       <header className="App-header">
-        <nav className="absolute top-5 right-5">
+        <nav className="absolute top-5 right-5 z-50">
           <div
             onClick={() => setCustomizationActive(!customizationActive)}
             className="flex gap-4 items-center justify-center bg-zinc-600 hover:bg-zinc-500 py-4 px-2 rounded-xl cursor-pointer group"
@@ -47,7 +52,7 @@ function App() {
         </nav>
 
         {customizationActive && (
-          <div className="absolute top-32 bg-zinc-600  px-28 py-6 rounded-2xl">
+          <div className="absolute top-32 bg-zinc-600  px-28 py-6 rounded-2xl z-50">
             <XCircleIcon
               onClick={() => {
                 setCustomizationActive(false);
@@ -74,9 +79,11 @@ function App() {
           </div>
         )}
 
-        {Object.keys(activeModules).map(
-          (item) => activeModules[item] && moduleMapping[item]
-        )}
+        <div className="flex flex-col gap-10 h-screen">
+          {Object.keys(moduleMapping).map(
+            (item) => activeModules[item] && moduleMapping[item]
+          )}
+        </div>
       </header>
     </div>
   );
