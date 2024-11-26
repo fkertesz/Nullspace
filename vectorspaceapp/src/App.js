@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Tasks from "./MinimumViableComponents/Tasks";
-import { Bars3CenterLeftIcon, XCircleIcon } from "@heroicons/react/24/solid";
+import { WrenchScrewdriverIcon, XCircleIcon } from "@heroicons/react/24/solid";
 import Calendar from "./MinimumViableComponents/Calendar";
 import Reminders from "./MinimumViableComponents/Reminders";
 import Announcements from "./MinimumViableComponents/Announcements";
@@ -34,20 +34,22 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="absolute top-5 left-5 font-bold text-3xl text-white">
-        VectorSpace
-      </h1>
       <header className="App-header">
-        <nav className="absolute top-5 right-5 z-50">
+        <nav className="sticky top-10 bottom-0 left-0 w-full right-0 z-50 bg-red-300">
+          <h1 className="absolute top-0 left-5 font-bold text-3xl text-white drop-shadow-lg">
+            VectorSpace
+          </h1>
           <div
             onClick={() => setCustomizationActive(!customizationActive)}
-            className="flex gap-4 items-center justify-center bg-zinc-600 hover:bg-zinc-500 py-4 px-2 rounded-xl cursor-pointer group"
+            className={`absolute top-0 right-5 flex gap-4 items-center justify-center bg-zinc-600 hover:bg-zinc-500 p-4 rounded-xl cursor-pointer group transition-all ${
+              customizationActive && "bg-zinc-700 ring-4 ring-white"
+            }`}
           >
-            <div className="text-base uppercase text-right font-bold hidden group-hover:block transition-all">
-              <h1>Customize</h1>
-              <h1>Dashboard</h1>
-            </div>
-            <Bars3CenterLeftIcon className="w-10 h-10" />
+            <WrenchScrewdriverIcon
+              className={`w-10 h-10 transition-all ${
+                customizationActive && "rotate-12 scale-110"
+              }`}
+            />
           </div>
         </nav>
 
@@ -79,7 +81,7 @@ function App() {
           </div>
         )}
 
-        <div className="flex flex-col gap-10 h-screen">
+        <div className="flex flex-col gap-10 h-screen mt-24">
           {Object.keys(moduleMapping).map(
             (item) => activeModules[item] && moduleMapping[item]
           )}
