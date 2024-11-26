@@ -1,7 +1,7 @@
 import React from "react";
 
 function Reminders() {
-  return <div>Reminders</div>;
+  return <textarea className="text-black p-4" />;
 }
 
 export default Reminders;
