@@ -9,6 +9,7 @@ import LoginScreen from "./MinimumViableComponents/LoginScreen";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState("John Doe");
   const [customizationActive, setCustomizationActive] = useState(false);
   const [activeModules, setActiveModules] = useState({
     calendar: true,
@@ -37,12 +38,12 @@ function App() {
   return (
     <div className="App">
       {!isLoggedIn ? (
-        <LoginScreen setIsLoggedIn={setIsLoggedIn} />
+        <LoginScreen setIsLoggedIn={setIsLoggedIn} setUserName={setUserName} />
       ) : (
         <header className="App-header">
           <nav className="sticky top-10 bottom-0 left-0 w-full right-0 z-50 bg-red-300">
             <h1 className="absolute top-0 left-5 font-bold text-3xl text-white drop-shadow-lg">
-              VectorSpace
+              Welcome to VectorSpace {userName}!
             </h1>
             <div
               onClick={() => setCustomizationActive(!customizationActive)}
