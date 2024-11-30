@@ -57,7 +57,7 @@ function Calendar() {
     <>
       <div>
         <h1 className="text-2xl font-bold text-center">
-          Welcome to the calander module!
+          Welcome to the Calendar Module!
         </h1>
         <p className="text-center italic text-red-500">
           Click to add events. Click and drag to define an event time.

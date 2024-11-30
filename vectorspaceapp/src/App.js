@@ -40,7 +40,14 @@ function App() {
       {!isLoggedIn ? (
         <LoginScreen setIsLoggedIn={setIsLoggedIn} setUserName={setUserName} />
       ) : (
-        <header className="App-header">
+        <header
+          className={`App-header ${
+            Object.keys(activeModules).filter((key) => activeModules[key])
+              .length > 1
+              ? "min-h-[150vh]" // Apply this class if more than one module is active
+              : "h-screen" // Default height if only one module is active
+          }`}
+        >
           <nav className="sticky top-10 bottom-0 left-0 w-full right-0 z-50 bg-red-300">
             <h1 className="absolute top-0 left-5 font-bold text-3xl text-white drop-shadow-lg">
               Welcome to VectorSpace {userName}!
@@ -60,7 +67,7 @@ function App() {
           </nav>
 
           {customizationActive && (
-            <div className="absolute top-32 bg-zinc-600  px-28 py-6 rounded-2xl z-50">
+            <div className="absolute top-32 bg-zinc-600 px-28 py-6 rounded-2xl z-50">
               <XCircleIcon
                 onClick={() => {
                   setCustomizationActive(false);
@@ -87,7 +94,15 @@ function App() {
             </div>
           )}
 
-          <div className="flex flex-col gap-10 h-screen mt-24">
+          {/* Main content section */}
+          <div
+            className={`flex flex-col gap-10 ${
+              Object.keys(activeModules)
+                .filter((key) => activeModules[key]).length > 1
+                ? "h-auto min-h-[150vh]" // Apply dynamic height if both calendar and tasks are active
+                : "h-screen" // Default height for single module
+            } mt-24`}
+          >
             {Object.keys(moduleMapping).map(
               (item) => activeModules[item] && moduleMapping[item]
             )}
