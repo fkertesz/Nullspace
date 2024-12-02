@@ -30,3 +30,9 @@ VectorSpace empowers teams to work better together by offering a streamlined, cu
 
 ## [Click to view Landing Page without cloning repository!](https://htmlpreview.github.io/?https://github.com/fkertesz/Nullspace/blob/main/VectorSpace/src/index.html)
 
+## Running the Prototype with Docker
+In these set of instructions, we are assuming that Docker was installed and set up correctly and that no other containers are running on Docker before starting.
+1. Once cloning this repository in your command prompt, change into the vectorspaceapp directory within the Nullspace directory. This can be done in the command prompt with `cd Nullspace/vectorspaceapp` when in the directory containing the cloned repository.
+2. Rebuild the Docker image with `docker build -t vectorspace-app .` in the command prompt  - make sure to include the dot at the end.
+3. Run the Docker container with `docker run -d -p 3000:3000 vectorspace-app` in the command prompt.
+4. Visit `http://localhost:3000` in your browser. The prototype of VectorSpace will appear shortly and be ready to use!
