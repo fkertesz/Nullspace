@@ -7,7 +7,7 @@ function LoginScreen({ setIsLoggedIn, setUserName }) {
       <div>
         <h1 className="text-5xl font-bold my-20">Welcome to VectorSpace.</h1>
 
-        <div className="flex flex-col gap-12">
+        <form className="flex flex-col gap-12">
           <div className="flex gap-6 flex-1 justify-center items-center w-full">
             <h1 className="w-30">Username</h1>
             <input
@@ -36,7 +36,7 @@ function LoginScreen({ setIsLoggedIn, setUserName }) {
           >
             Click to login
           </button>
-        </div>
+        </form>
       </div>
     </header>
   );

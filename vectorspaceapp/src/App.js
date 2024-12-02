@@ -67,7 +67,7 @@ function App() {
           </nav>
 
           {customizationActive && (
-            <div className="absolute top-32 bg-zinc-600 px-28 py-6 rounded-2xl z-50">
+            <div className="sticky top-32 bg-zinc-600 px-28 py-6 rounded-2xl z-50">
               <XCircleIcon
                 onClick={() => {
                   setCustomizationActive(false);
@@ -97,8 +97,8 @@ function App() {
           {/* Main content section */}
           <div
             className={`flex flex-col gap-10 ${
-              Object.keys(activeModules)
-                .filter((key) => activeModules[key]).length > 1
+              Object.keys(activeModules).filter((key) => activeModules[key])
+                .length > 1
                 ? "h-auto min-h-[150vh]" // Apply dynamic height if both calendar and tasks are active
                 : "h-screen" // Default height for single module
             } mt-24`}

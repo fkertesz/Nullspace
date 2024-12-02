@@ -1,8 +1,24 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, input } from "@testing-library/react";
 import App from "./App";
 
-test("VectorSpace appears", () => {
+test("Login appears", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const welcomeScreenElement = screen.getByText(/Welcome to VectorSpace./);
+  const usernameElement = screen.getByText(/Username/);
+  const passwordElement = screen.getByText(/Password/);
+  expect(welcomeScreenElement).toBeInTheDocument();
+  expect(usernameElement).toBeInTheDocument();
+  expect(passwordElement).toBeInTheDocument();
+});
+
+test("Calendar component presents options", () => {
+  render(<App />);
+  const month = screen.getByText(/Month/);
+  const week = screen.getByText(/Week/);
+  const day = screen.getByText(/Day/);
+  const agenda = screen.getByText(/Agenda/);
+  expect(month).toBeInTheDocument();
+  expect(week).toBeInTheDocument();
+  expect(day).toBeInTheDocument();
+  expect(agenda).toBeInTheDocument();
 });
