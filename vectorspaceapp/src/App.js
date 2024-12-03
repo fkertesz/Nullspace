@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App h-auto bg-[#282c34]">
       {!isLoggedIn ? (
         <LoginRegisterScreen
           setIsLoggedIn={setIsLoggedIn}
@@ -60,7 +60,7 @@ function App() {
         />
       ) : (
         <header
-          className={`App-header pt-10 ${
+          className={`App-header h-full pt-10 ${
             Object.keys(activeModules).filter((key) => activeModules[key])
               .length > 1
               ? "min-h-[150vh]" // Apply this class if more than one module is active
@@ -189,7 +189,7 @@ function App() {
 
           {/* Main content section */}
           <div
-            className={`flex flex-col gap-10 ${
+            className={`flex flex-col gap-10 h-auto bg- ${
               Object.keys(activeModules).filter((key) => activeModules[key])
                 .length > 1
                 ? "h-auto min-h-[150vh]" // Apply dynamic height if both calendar and tasks are active

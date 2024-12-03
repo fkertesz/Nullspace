@@ -7,14 +7,22 @@ function Reminders() {
     const arrayListComponents = [];
     for (let i = 0; i < numReminders; i++) {
       arrayListComponents.push(
-        <textarea key={i} className="text-black p-4 w-full my-5 rounded-xl" />
+        <div
+          contentEditable="true"
+          key={i}
+          className="text-black p-4 w-[vw] my-5 rounded-xl bg-white text-left responsive-margins overflow-y-scroll max-h-96"
+        />
       );
     }
-    return <div className="w-full h-full">{arrayListComponents}</div>;
+    return (
+      <div className="w-auto h-full responsive-margins">
+        {arrayListComponents}
+      </div>
+    );
   };
   return (
     <>
-      <div className="w-full h-auto relative mb-10">
+      <div className="w-full h-auto relative mb-10 bg-[#282c34">
         <h1 className="text-2xl font-bold text-center">
           Welcome to the Reminder Module!
         </h1>
