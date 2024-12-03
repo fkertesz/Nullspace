@@ -3,8 +3,9 @@ import React, { useState } from "react";
 export const Login = ({
   onFormSwitch,
   registeredUsers,
+  setRegisteredUsers,
   setIsLoggedIn,
-  setUserName,
+  setActiveUser,
 }) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
@@ -17,10 +18,10 @@ export const Login = ({
         (user) => user.email === email && user.password === pass
       )
     ) {
-      setUserName(
+      setActiveUser(
         registeredUsers.find(
           (user) => user.email === email && user.password === pass
-        ).name
+        )
       );
       setIsLoggedIn(true);
     } else {

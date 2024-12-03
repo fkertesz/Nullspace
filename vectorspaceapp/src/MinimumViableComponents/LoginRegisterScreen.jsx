@@ -4,19 +4,17 @@ import "../App.css";
 import { Login } from "./Login";
 import { Register } from "./Register";
 
-function LoginRegisterScreen({ setIsLoggedIn, setUserName }) {
+function LoginRegisterScreen({
+  setIsLoggedIn,
+  setActiveUser,
+  registeredUsers,
+  setRegisteredUsers,
+}) {
   const [currentForm, setCurrentForm] = useState("login");
 
   const toggleForm = (formName) => {
     setCurrentForm(formName);
   };
-
-  // Fake registered users for prototype
-  const registeredUsers = [
-    { name: "zac", email: "zcowan@bellarmine.edu", password: "1234" },
-    { name: "fani", email: "fkertesz@bellarmine.edu", password: "1234" },
-    { name: "nicholas", email: "nnewsome@bellarmine.edu", password: "1234" },
-  ];
 
   return (
     <div className="App-login flex flex-col bg-gradient-to-tr from-[#752936] to-[#1e080c] animate-gradient">
@@ -27,15 +25,17 @@ function LoginRegisterScreen({ setIsLoggedIn, setUserName }) {
         <Login
           onFormSwitch={toggleForm}
           registeredUsers={registeredUsers}
+          setRegisteredUsers={setRegisteredUsers}
           setIsLoggedIn={setIsLoggedIn}
-          setUserName={setUserName}
+          setActiveUser={setActiveUser}
         />
       ) : (
         <Register
           onFormSwitch={toggleForm}
           registeredUsers={registeredUsers}
+          setRegisteredUsers={setRegisteredUsers}
           setIsLoggedIn={setIsLoggedIn}
-          setUserName={setUserName}
+          setActiveUser={setActiveUser}
         />
       )}
     </div>
