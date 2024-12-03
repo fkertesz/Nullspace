@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../output.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
     <title>VectorSpace</title>
   </head>
   <body class="">
@@ -25,11 +25,11 @@
           class="text-2xl font-extralight justify-center items-center cursor-pointer"
         >
           <a
-            href="../../src/index.html"
+            href="index.html"
             class="flex justify-center items-center text-[#752936] font-mono"
           >
             <img
-              src="../icons/nullspace_thick-removebg.png"
+              src="./icons/nullspace_thick-removebg.png"
               alt=""
               class="w-8"
             />
@@ -44,15 +44,15 @@
           class="hidden lg:flex space-x-2 lg:space-x-4 justify-center items-center"
         >
           <li class="navItem">
-            <a href="../index.html#product">Our Product</a>
+            <a href="#product">Our Product</a>
           </li>
 
           <li class="navItem">
-            <a href="../index.html#vision">Our Vision</a>
+            <a href="#vision">Our Vision</a>
           </li>
 
           <li class="navItem">
-            <a href="../index.html#about">Our Team</a>
+            <a href="#about">Our Team</a>
           </li>
           <!--
             <li class="navItem">
@@ -60,62 +60,64 @@
             </li>
           -->
           <li class="navItem group relative">
-            <a href="./index.html">Interviews</a>
+            <a href="interviews/index.html">Interviews</a>
             <div
               class="invisible transition-all ease-out duration-200 group-active:visible group-hover:visible absolute left-0 top-11 py-4 px-6 bg-[#F4F7FA]/70 hover:backdrop-blur-sm rounded-b-xl z-50 font-normal w-56"
             >
               <ul class="flex flex-col flex-1 gap-5">
                 <li>
-                  <a href="./interview1.html"> Interview One </a>
+                  <a href="interviews/interview1.html"> Interview One </a>
                 </li>
                 <li>
-                  <a href="./interview2.html"> Interview Two </a>
+                  <a href="interviews/interview2.html"> Interview Two </a>
                 </li>
                 <li>
-                  <a href="./interview3.html"> Interview Three </a>
+                  <a href="interviews/interview3.html"> Interview Three </a>
                 </li>
                 <li>
-                  <a href="./interview4.html"> Interview Four </a>
+                  <a href="interviews/interview4.html"> Interview Four </a>
                 </li>
                 <li>
-                  <a href="./interview5.html"> Interview Five </a>
+                  <a href="interviews/interview5.html"> Interview Five </a>
                 </li>
               </ul>
             </div>
           </li>
 
           <li class="navItem group relative">
-            <a href="../design_artifacts/index.html">Design Artifacts</a>
+            <a href="design_artifacts/index.html">Design Artifacts</a>
             <div
               class="invisible transition-all ease-out duration-200 group-active:visible group-hover:visible absolute left-0 top-11 py-4 px-6 bg-[#F4F7FA]/70 hover:backdrop-blur-sm rounded-b-xl z-50 font-normal w-56"
             >
               <ul class="flex flex-col flex-1 gap-5">
                 <li>
-                  <a href="../design_artifacts/personas/index.html">
-                    Personas
-                  </a>
+                  <a href="design_artifacts/personas/index.html"> Personas </a>
                 </li>
                 <li>
-                  <a href="../design_artifacts/scenarios/index.html">
+                  <a href="design_artifacts/scenarios/index.html">
                     Scenarios
                   </a>
                 </li>
                 <li>
-                  <a href="../design_artifacts/user_stories.html">
+                  <a href="design_artifacts/user_stories.html">
                     User Stories
                   </a>
                 </li>
                 <li>
-                  <a href="../design_artifacts/features.html"> Features </a>
+                  <a href="design_artifacts/features.html"> Features </a>
                 </li>
               </ul>
             </div>
+          </li>
+
+          <li class="navItem">
+            <a href="./application.html">Application</a>
           </li>
         </ol>
 
         <li>
           <button class="px-4 py-2 rounded-md action-button text-white">
-            <a href="../architectural.html">Architectural Design</a>
+            <a href="./architectural.html">Architectural Design</a>
           </button>
         </li>
       </ul>
@@ -124,33 +126,30 @@
     <section
       class="responsive-margins mt-16 flex flex-col space-y-24 content-center text-center justify-center items-center"
     >
-      <ul class="flex flex-col gap-5 text-2xl">
-        <li
-          class="hover:underline transition-all ease-in-out hover:text-[#752936] hover:font-bold"
-        >
-          <a href="./interview1.html">Interview One</a>
-        </li>
-        <li
-          class="hover:underline transition-all ease-in-out hover:text-[#752936] hover:font-bold"
-        >
-          <a href="./interview2.html">Interview Two</a>
-        </li>
-        <li
-          class="hover:underline transition-all ease-in-out hover:text-[#752936] hover:font-bold"
-        >
-          <a href="./interview3.html">Interview Three</a>
-        </li>
-        <li
-          class="hover:underline transition-all ease-in-out hover:text-[#752936] hover:font-bold"
-        >
-          <a href="./interview4.html">Interview Four</a>
-        </li>
-        <li
-          class="hover:underline transition-all ease-in-out hover:text-[#752936] hover:font-bold"
-        >
-          <a href="./interview5.html">Interview Five</a>
-        </li>
-      </ul>
+      <div class="text-left flex flex-col gap-9 py-10">
+        <h1 class="font-bold text-4xl">Running VectorSpace prototype</h1>
+
+        <div>
+          <h2 class="text-2xl uppercase text-[#752936] font-bold">
+            Running Protype (Building Image and Running in Container)
+          </h2>
+          <p class="mx-5 text-lg italic">
+            <br />
+            Clone the repository:
+            <a
+              class="text-blue-600 hover:underline hover:font-bold"
+              href="https://github.com/fkertesz/Nullspace.git"
+              >VectorSpace on Github</a
+            >
+            <br />
+            From within the "vectorspaceapp" directory proceed to the following
+            docker sections to either run the application prototype or unit
+            tests.
+
+            <br />
+          </p>
+        </div>
+      </div>
     </section>
   </body>
 </html>

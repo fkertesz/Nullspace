@@ -1,5 +1,6 @@
 import { render, screen, input } from "@testing-library/react";
 import App from "./App";
+import Calendar from "./MinimumViableComponents/Calendar";
 
 test("Login appears", () => {
   render(<App />);
@@ -12,7 +13,7 @@ test("Login appears", () => {
 });
 
 test("Calendar component presents options", () => {
-  render(<App />);
+  render(<Calendar />);
   const month = screen.getByText(/Month/);
   const week = screen.getByText(/Week/);
   const day = screen.getByText(/Day/);

@@ -26,14 +26,14 @@ function Reminders() {
           <button
             onClick={() => setNumberReminders(numReminders + 1)}
             className="bg-blue-500 text-white p-2 rounded-lg w-full disabled:opacity-45"
-            disabled={numReminders == 3}
+            disabled={numReminders === 3}
           >
             Add Reminder Box
           </button>
           <button
             onClick={() => setNumberReminders(numReminders - 1)}
             className="bg-red-500 text-white p-2 rounded-lg w-full disabled:opacity-45"
-            disabled={numReminders == 0}
+            disabled={numReminders === 0}
           >
             Remove Reminder Box
           </button>
