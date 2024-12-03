@@ -1,7 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 import Tasks from "./MinimumViableComponents/Tasks";
-import { WrenchScrewdriverIcon, XCircleIcon } from "@heroicons/react/24/solid";
+import {
+  WrenchScrewdriverIcon,
+  XCircleIcon,
+  UserIcon,
+} from "@heroicons/react/24/solid";
 import Calendar from "./MinimumViableComponents/Calendar";
 import Reminders from "./MinimumViableComponents/Reminders";
 import Announcements from "./MinimumViableComponents/Announcements";
@@ -28,7 +32,6 @@ function App() {
     calendar: true,
     tasks: true,
     reminders: false,
-    announcements: false,
   });
 
   // Module mapping maps an element of activeModules to a React component.
@@ -37,7 +40,6 @@ function App() {
     calendar: <Calendar />,
     tasks: <Tasks />,
     reminders: <Reminders />,
-    announcements: <Announcements />,
   };
 
   const handleModuleChange = (event) => {
@@ -59,7 +61,7 @@ function App() {
         />
       ) : (
         <header
-          className={`App-header ${
+          className={`App-header pt-10 ${
             Object.keys(activeModules).filter((key) => activeModules[key])
               .length > 1
               ? "min-h-[150vh]" // Apply this class if more than one module is active
@@ -67,17 +69,32 @@ function App() {
           }`}
         >
           <nav className="sticky top-10 bottom-0 left-0 w-full right-0 z-50 bg-red-300">
+            <div
+              onClick={() => setProfileViewActive(!profileViewActive)}
+              className={`absolute top-0 left-5 flex gap-4 items-center justify-center bg-zinc-600 hover:bg-zinc-500 p-4 rounded-xl cursor-pointer group transition-all z-50 ${
+                customizationActive && "bg-zinc-700 ring-4 ring-white"
+              }`}
+            >
+              <UserIcon
+                className={`w-10 h-10 transition-all ${
+                  profileViewActive && "-rotate-12 scale-110"
+                }`}
+              />
+            </div>
+
             <h1
               onClick={() => {
                 setProfileViewActive(!profileViewActive);
               }}
-              className="absolute top-0 left-5 font-bold text-3xl text-white drop-shadow-lg hover:underline cursor-pointer"
+              className="absolute top-2 right-5 left-5 font-bold text-3xl text-white drop-shadow-lg hover:underline cursor-pointer bg-zinc-600/50 hover:bg-zinc-600/70 hover:backdrop-blur-sm z-20 rounded-xl h-auto py-3 "
             >
-              Welcome to VectorSpace {activeUser.name}!
+              {activeUser.name.substring(0, 1).toUpperCase()}
+              {activeUser.name.substring(1)}'s VectorSpace
             </h1>
+
             <div
               onClick={() => setCustomizationActive(!customizationActive)}
-              className={`absolute top-0 right-5 flex gap-4 items-center justify-center bg-zinc-600 hover:bg-zinc-500 p-4 rounded-xl cursor-pointer group transition-all ${
+              className={`absolute top-0 right-5 flex gap-4 items-center justify-center bg-zinc-600 hover:bg-zinc-500 p-4 rounded-xl cursor-pointer group transition-all z-50 ${
                 customizationActive && "bg-zinc-700 ring-4 ring-white"
               }`}
             >
