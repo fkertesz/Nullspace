@@ -6,6 +6,7 @@ import Calendar from "./MinimumViableComponents/Calendar";
 import Reminders from "./MinimumViableComponents/Reminders";
 import Announcements from "./MinimumViableComponents/Announcements";
 import LoginScreen from "./MinimumViableComponents/LoginScreen";
+import LoginRegisterScreen from "./MinimumViableComponents/LoginRegisterScreen";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,7 +39,10 @@ function App() {
   return (
     <div className="App">
       {!isLoggedIn ? (
-        <LoginScreen setIsLoggedIn={setIsLoggedIn} setUserName={setUserName} />
+        <LoginRegisterScreen
+          setIsLoggedIn={setIsLoggedIn}
+          setUserName={setUserName}
+        />
       ) : (
         <header
           className={`App-header ${

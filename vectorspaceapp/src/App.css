@@ -5,6 +5,21 @@
 .App {
   text-align: center;
 }
+.App-login {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: linear-gradient(
+    79deg,
+    #940128 1%,
+    #7a1c27,
+    #fad5c2,
+    #ffffff 85%
+  );
+}
 
 .App-logo {
   height: 40vmin;
@@ -51,4 +66,51 @@
   .font-outline-4 {
     -webkit-text-stroke: 4px black;
   }
+}
+
+/*
+Login Screen Styles
+*/
+
+.auth-form-container,
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  .auth-form-container {
+    padding: 5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+}
+
+.login-label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+.login-input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.login-button {
+  border: none;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #7439db;
+}
+
+.link-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
 }
