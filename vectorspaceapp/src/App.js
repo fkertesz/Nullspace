@@ -8,7 +8,6 @@ import {
 } from "@heroicons/react/24/solid";
 import Calendar from "./MinimumViableComponents/Calendar";
 import Reminders from "./MinimumViableComponents/Reminders";
-import Announcements from "./MinimumViableComponents/Announcements";
 import LoginRegisterScreen from "./MinimumViableComponents/LoginRegisterScreen";
 
 function App() {
