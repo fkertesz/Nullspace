@@ -39,7 +39,7 @@ export const Register = ({
       )}
       <form className="register-form" onSubmit={handleSubmit}>
         <label className="login-label" htmlFor="name">
-          Full name
+          Full Name
         </label>
         <input
           className="login-input"
